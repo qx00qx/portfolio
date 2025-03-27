@@ -1,4 +1,4 @@
-import { Footer } from "@/widgets/Footer";
+import { Footer } from '@/widgets/Footer';
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -6,8 +6,8 @@ interface MainLayoutProps {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="layout">
-      <div className="layout__content">
+    <div className="layout flex flex-col min-h-screen">
+      <div className="layout__content flex-grow">
         <main>{children}</main>
       </div>
       <Footer />
