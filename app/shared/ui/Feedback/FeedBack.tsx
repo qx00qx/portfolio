@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../Input/Input';
 
-const FeedBack = () => {
+const FeedBack = ({ }) => {
   return (
     <div>
       <p className="uppercase text-2xl">cвязь со мной</p>

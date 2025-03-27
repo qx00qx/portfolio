@@ -1,5 +1,5 @@
-import { MainLayout } from './widgets/Layout/MainLayout';
+import { HomePage } from './pages/home/page';
 
 export default function Home() {
-  return <MainLayout></MainLayout>;
-}
+    return <HomePage />;
+} 
