@@ -1,4 +1,4 @@
-import FeedBack from '@/app/shared/ui/Feedback/FeedBack';
+import FeedBackForm from '../../shared/ui/forms/FeedBackForm';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -12,7 +12,7 @@ export const Footer: FC<FooterProps> = ({ className }) => {
       <div className="bg-black text-white p-[50px] w-full flex gap-[150px]">
         <div className="right">
           <img className="mb-[80]" src="/logo-img.svg" alt="Андрей Табуринский" />
-          <FeedBack />
+          <FeedBackForm />
         </div>
         <div className="left">
           <div className="columns flex gap-[100px]">

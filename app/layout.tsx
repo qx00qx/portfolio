@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import { LenisProvider } from './shared/components/LenisProvider';
+import { LenisProvider } from './shared/providers/LenisProvider';
 
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],

@@ -5,14 +5,18 @@ import { cn } from '../../lib/styles';
 interface InputProps {
   className?: string;
   placeholder?: string;
+  type?: string;
+  id?: string
 }
 
-const Input: FC<InputProps> = ({ className, placeholder }) => {
+const Input: FC<InputProps> = ({ className, placeholder, type, id, ...props }) => {
   return (
     <input
-      className={cn(className, 'bg-transparent border-b border-white placeholder-white')}
+      className={cn(className, 'w-full bg-transparent border-b')}
       placeholder={placeholder}
-      type="text"
+      type={type}
+      id={id}
+      {...props}
     />
   );
 };
