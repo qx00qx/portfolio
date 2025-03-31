@@ -8,9 +8,9 @@ interface HeadingProps {
 
 export const Heading: FC<HeadingProps> = ({ className, text }) => {
     return (
-        <h2 className={cn(className, 'font-bold text-[64px] leading-[150%] leading-[-2.2px] uppercase')}>
+        <h1 className={cn(className, 'font-bold text-[64px] leading-[150%] leading-[-2.2px] uppercase')}>
             {text}
-        </h2>
+        </h1>
     );
 };
 

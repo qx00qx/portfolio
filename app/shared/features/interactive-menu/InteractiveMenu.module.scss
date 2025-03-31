@@ -1,0 +1,22 @@
+.image-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+  }
+  
+.image-part {
+  position: absolute;
+  width: 33.333%;
+  height: 33.333%;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.image-container:hover .image-part {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.part1 { transform: translate(-100%, -100%); }
+.part2 { transform: translate(0, -100%); }
+.part3 { transform: translate(100%, -100%); }

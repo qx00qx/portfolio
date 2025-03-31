@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { useState } from 'react'
-import Input from '../Input/Input'
+import Input from '../input/Input'
 
 const contactFormSchema = z.object({
     name: z.string().min(2, 'Имя должно содержать минимум 2 символа'),
@@ -33,6 +33,7 @@ export const ContactForm = () => {
             name: '',
             email: '',
             phone: '',
+            username: '',
         },
     })
 
@@ -51,7 +52,7 @@ export const ContactForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-[40px] max-w-[527px] mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-[40px] w-[527px] mx-auto">
             <div>
                 <Input
                     {...register('name')}
@@ -86,8 +87,8 @@ export const ContactForm = () => {
                     placeholder="+7(900)000-00-00"
                     className="border-black placeholder-black placeholder:lowercase placeholder:text-xl placeholder:opacity-50"
                 />
-                {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                {errors.phone && (
+                    <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
                 )}
             </div>
 
@@ -96,19 +97,18 @@ export const ContactForm = () => {
                     {...register('username')}
                     type="text"
                     id="username"
-                    placeholder="@username телеграм"
+                    placeholder="@username telegram"
                     className="border-black placeholder-black placeholder:lowercase placeholder:text-xl placeholder:opacity-50"
                 />
-                {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                {errors.username && (
+                    <p className="mt-1 text-sm text-red-600">{errors.username.message}</p>
                 )}
             </div>
-
 
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full text-xl flex justify-center py-2 px-4 bg-black lowercase text-white disabled:opacity-50"
+                className="w-full text-xl flex justify-center py-2 px-4 font-semibold bg-black lowercase text-white disabled:opacity-50"
             >
                 {isSubmitting ? 'Отправка...' : 'Оставить заявку'}
             </button>
